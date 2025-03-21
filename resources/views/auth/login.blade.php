@@ -11,7 +11,12 @@
             <x-text-input id="login" class="block mt-1 w-full" placeholder="Логин" type="text" name="login" :value="old('login')" required autofocus autocomplete="username" />
             <x-input-error :messages="$errors->get('login')" class="mt-2" />
         </div>
-
+        <!-- Email Address -->
+        <!--<div>
+            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+        </div>-->
+        
         <!-- Password -->
         <div class="mt-4">
             <x-text-input id="password" class="block mt-1 w-full" placeholder="Пароль"
