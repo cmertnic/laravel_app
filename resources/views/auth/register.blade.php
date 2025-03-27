@@ -3,6 +3,17 @@
         @csrf
         <h1 class="text-center mb-20 text-5xl"></h1>
         <h1 class="text-center text-blue-500/100 mb-10 text-4xl">Регистрация</h1>
+           <!-- Общее сообщение об ошибке -->
+        @if ($errors->any())
+            <div class="mb-4 text-red-600">
+                <strong>Произошла ошибка при регистрации:</strong>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
           <!-- Login -->
           <div class="mt-4">
             <x-text-input id="login" class="block mt-1 w-full" type="text" name="login" :value="old('login')" required autofocus autocomplete="login" placeholder="Логин" maxlength="20" />
